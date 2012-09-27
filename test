@@ -1,0 +1,3 @@
+#/bin/bash
+for i in $(seq 0 31); do grep nan /lustre/atlas/orlando/20120314/T20_run001/results_MPPC_$i"_"* &>/dev/null; if [ $? -eq 0 ]; then echo "mppc $i bad"; fi; done
+

@@ -1,0 +1,12 @@
+Box 						517
+Date 						20120511
+Run 						010
+Temperature 		5
+Main_directory 	/lustre/atlas/jgpavez
+Vop_Over_BDV		0.9
+min_index				0
+max_index				12
+Bad							5 16 27 28 29 -1
+min_pos					0
+max_pos					31
+sigma_fit				8.0

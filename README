@@ -1,0 +1,39 @@
+Analysis procedure for MPPC data.
+
+Instructions how to use it:
+
+First the user should setup the parameters.txt file which has:
+20120307 (the date data was taken)
+003 (run number)
+20 (temperature)
+/lustre/atlas/hayk (the location to save the output)
+0.9 (the shift from the break down voltage to get the operational point)
+1 (high voltage index one wants to get results)
+9 (low voltage index one wants to get results)
+
+after that run this sequence:
+read_data/read_data (only once) (15 minutes)
+./fitNofit (6 minutes)
+./presentation/plot (1 minute)
+
+the output in the case of parameter setup above should appear hear:
+/lustre/atlas/hayk/20120307/T20/
+
+outputs per scripts:
+read_data/read_data:
+gaussian_fit.root (with simple histograms with all positions and pins)
+
+./fitNofit:
+gaussian_fit_MPPC_"position".root (histograms with found peaks )
+gain_vs_volt_pos"position"_pin"pin".gif (gain vs. voltage plot to get
+the break down voltage for each position and pin)
+lambda_vs_volt_pos"position"_pin"pin".gif (average number of
+photo-electrons vs. voltage)
+BreakDownVolatge_MPPC_"position".txt (with general output)
+results_MPPC_"position".txt (with concise output which include only
+measurements at operational point).
+
+./presentation/plot:
+gain_voltage_"position".gif
+phe_dr_ct_"position".gif
+(final plots at operational point)
